@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: linear-gradient( #0000FF,  white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+#logo{
+    padding-left: 20px;
+}
+
+#logo img{
+    border-radius: 20%;
+}
+.local{
+    background-image: linear-gradient(to left, #0000FF,  white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:block;
+}
+footer{
+    color: white;
+    bottom: 0;
+    width: 100%;     
+    background-color:black;
+    display:flex;
+      
+}
+#texloc{
+    text-align:left;
+    margin: 10px;
+}
+#texloc h1{
+    color: #ff7f00;
+}
+h1{
+    font-size: 1.4rem;
+    font-family: Arial;
+}
+p{
+    font-size: 1.0rem;
+}
+.flexbox-container{
+    width: 100%;
+    height: auto;
+    border: 2px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flexbox-item{
+    display: table;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border-radius: 20px;
+    margin: 2%;
+    
+    text-align: center;
+}
+.flexbox-item img{
+    width: 160px;
+    height: 160px;
+}
+
+#mapa{
+    display: flex;
+    justify-content: space-around;
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline;
+    position: relative;
+}
+
+.menu ul li a {
+    color:white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 20px;
+    transition: background .3s;
+}
+
+.menu ul li a:hover {
+    background-color: aquamarine;
+}
+/*sub menu*/
+.menu ul ul {
+    background-color: black;
+
+    display: none;
+    right:0;
+    position: absolute;
+}
+
+.menu ul li:hover ul {
+    display: block;
+
+}
+
+.menu ul ul {
+    width: 150px
+}
+
+.menu ul ul li a {
+    display: 150px;
+}
+header{
+    display: flex;
+    align-items: center;
+}
+.menu{
+    margin-left: 30px;
+}
+
+.sobre >div{
+    text-align: center; 
+    
+}
+.sobre h1{
+    font-size: 4.0rem;
+    font-family: Arial;
+    color: #ff7f00;
+}
+.sobre p {
+    font-size: 2rem;
+    font-family: Arial;
+    
+}
+.sobre2 div{
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.itens{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:438px) {
+    #img5 img{
+        width: 200px;
+    }
+}
+.iris{
+    background-image: linear-gradient(to right, #00008B,#0000CD,#0000FF,#4169E1,blue,#00BFFF,#87CEFA);
+    display: flex;
+    height:8px
+    
+}
+@media screen and (max-width:600px){
+    .iris{
+        background-image: linear-gradient(to right, #00FFFF,#00CED1,#40E0D0,#48D1CC,#20B2AA,#008B8B,#008080);
+        height:8px
+    }
+}
