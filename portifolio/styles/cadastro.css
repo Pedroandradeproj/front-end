@@ -1,0 +1,157 @@
+:root[data-modo="escuro"] {
+    --letra: white;
+    --fundo: black;
+}
+
+:root[data-modo="claro"] {
+    --letra: black;
+    --fundo: white;
+}
+
+#cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card {
+    background-color: rgba(19, 19, 19, 0.596);
+    padding: 40px;
+    border-radius: 2px;
+    width: 280px;
+}
+
+.card-header {
+    padding-bottom: 30px;
+    opacity: 0.8;
+    color: var(--letra);
+}
+
+.card-content label {
+    color: var(--letra);
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.card-content-area {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.card-content-area input {
+    margin-top: 10px;
+    padding: 0 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #e1e1e1;
+    outline: none;
+    color: var(--letra);
+}
+
+.card-content-area input[type="password"] {
+    /* Adicionando estilo para o campo de senha */
+    position: relative;
+}
+
+.card-content-area input[type="password"] .toggle-password {
+    /* Estilo para o ícone do olho no campo de senha */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer .submit {
+    width: 100%;
+    height: 40px;
+    background-color: mediumblue;
+    border: none;
+    color: white;
+    margin: 10px 0;
+}
+
+.card-footer a {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+    color: var(--letra);
+    text-decoration: none;
+}
+
+#cadastro {
+    background-color: var(--fundo);
+}
+/* ... (código anterior) ... */
+
+
+
+/* ... (código posterior) ... */
+.card-content-area .password-container {
+    /* Adicionando um estilo para a área do campo de senha */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para mensagens de erro */
+.error-message {
+    color: #ff6f61; /* Vermelho */
+}
+
+
+.success-message {
+    color: #5cb85c; /* Verde */
+}
+
+/* Exemplo de estilização do texto de placeholder */
+
+#conta{
+    margin-top: 10px;
+}
+#login{
+    display: flex;
+    text-align: center;
+    font-size: 16px;
+}
+/* Centraliza o texto "Cadastre-se" e "Já tem uma conta? Faça login" */
+#login a {
+    font-size: 14px;
+}
+/* Estilização do texto de placeholder */
+::placeholder {
+    color: var(--letra); /* Substitua pelo código da cor desejada */
+    opacity: 0.8; /* Ajuste a opacidade conforme necessário */
+}
+.card-content-area {
+    display: flex;
+    position: relative;
+}
+
+.card-content-area input[type="password"] {
+    /* Ajuste para o campo de senha e confirmação de senha */
+    flex: 1;
+}
+
+.card-content-area .toggle-password {
+    /* Ajuste para o ícone de visibilidade */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--letra); /* Cor do ícone - ajuste conforme necessário */
+    opacity: 0.8;
+}
+
+.card-content-area .toggle-password:hover {
+    /* Alterando a cor do ícone ao passar o mouse sobre o campo de senha e confirmação de senha */
+    color: var(--letra); /* Cor ao passar o mouse sobre o ícone - pode ser ajustada conforme necessário */
+}

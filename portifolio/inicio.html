@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Projeto</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styles/inicio.css"> <!-- Crie um arquivo styles.css para suas regras de estilo -->
+    <link rel="stylesheet" href="styles/menu.css"> <!-- Crie um arquivo styles.css para suas regras de estilo -->
+    <script defer src="scripts/script.js"></script> <!-- Crie um arquivo script.js para suas interações com JavaScript -->
+</head>
+<body>
+
+<header id="header">
+      <a id="logo" href="imagens/logo.png"><img src="imagens/logo.png"></a>
+        <menu id="nav">
+          <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span class="material-symbols-outlined">
+            menu
+            </span></button>
+          <ul id="menu" role="menu">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="login.html"><span class="material-symbols-outlined">
+              account_circle
+              </span></a></li>
+            <li id="changeColorIconNightlight"><span class="material-symbols-outlined">
+                nightlight
+            </span></li>
+            <li id="changeColorIconLightMode"><span class="material-symbols-outlined">
+                light_mode
+            </span></li>
+            <li id="changeLanguageIcon"><span class="material-symbols-outlined">
+                language
+            </span></li>
+          </ul>
+        </menu>
+</header>
+<div class="language-options-container">
+    <div class="language-options">
+        <span class="material-symbols-outlined close-button" id="closeButton">
+            close
+        </span>
+        <div class="gtranslate_wrapper"></div>
+    </div>
+</div>
+
+<section id="inicio">
+  <div class="container">
+      <!-- Adicione uma imagem centralizada e arredondada -->
+      <img src="imagens/eu.jpg" alt="Pedro Andrade" id="img">
+
+      <h2>Olá, eu sou Pedro Andrade</h2>
+      <p>Desenvolvedor web apaixonado por criar experiências digitais incríveis. Atualmente, estou no curso técnico de Desenvolvimento de Sistemas, buscando aprimorar minhas habilidades e conhecimentos.</p>
+      
+      <p>Tenho um forte compromisso com meu desenvolvimento profissional. Vindo de uma família simples, aprendi desde cedo o valor da dedicação e do esforço. Estou determinado a trilhar meu caminho na área de TI e acredito que cada oportunidade de aprendizado é valiosa, não deixando passar chances de me capacitar.</p>
+
+      <p>No próximo ano, pretendo ingressar em uma faculdade para aprofundar ainda mais meus conhecimentos. Estou aberto a desafios e oportunidades de crescimento, sempre disposto a aprender e contribuir para projetos inovadores.</p>
+
+      <!-- Chamada para Ação -->
+      <a href="contato.html" class="btn">Veja meu trabalho</a>
+  </div>
+</section>
+
+</body>
+
+<script>window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"detect_browser_language":true,"languages":["pt","it","es","en","zh-TW","zh-CN"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"pt":"brazil"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/fn.js" defer></script>
+</html>

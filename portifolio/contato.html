@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Projeto</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="styles/contato.css"> <!-- Crie um arquivo styles.css para suas regras de estilo -->
+  <link rel="stylesheet" href="styles/menu.css"> <!-- Crie um arquivo styles.css para suas regras de estilo -->
+  <script defer src="scripts/script.js"></script> <!-- Crie um arquivo script.js para suas interações com JavaScript -->
+</head>
+
+<body>
+
+  <header id="header">
+    <a id="logo" href="imagens/logo.png"><img src="imagens/logo.png"></a>
+      <menu id="nav">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span class="material-symbols-outlined">
+          menu
+          </span></button>
+        <ul id="menu" role="menu">
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html"><span class="material-symbols-outlined">
+            account_circle
+            </span></a></li>
+          <li id="changeColorIconNightlight"><span class="material-symbols-outlined">
+              nightlight
+          </span></li>
+          <li id="changeColorIconLightMode"><span class="material-symbols-outlined">
+              light_mode
+          </span></li>
+          <li id="changeLanguageIcon"><span class="material-symbols-outlined">
+              language
+          </span></li>
+        </ul>
+      </menu>
+</header>
+<div class="language-options-container">
+  <div class="language-options">
+      <span class="material-symbols-outlined close-button" id="closeButton">
+          close
+      </span>
+      <div class="gtranslate_wrapper"></div>
+  </div>
+</div>
+  <section id="contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <p>Para entrar em contato comigo, você pode enviar um e-mail para <a
+          href="mailto:pedroandradesales@gmail.com">pedroandradesales@gmail.com</a> ou ligar para <a
+          href="tel:+55 31 98477-9327">31 98477-9327</a>. Estou disponível para oportunidades profissionais, parcerias e
+        colaborações. Fico à disposição para trocar experiências e conhecimentos.</p>
+      <!-- Adicionando o perfil do GitHub -->
+      <div>
+        <img
+          src="https://media.licdn.com/dms/image/D4D35AQEUld40aLorZw/profile-framedphoto-shrink_400_400/0/1697330196554?e=1702994400&v=beta&t=wq_M7wED5A0EvU1ULvd9_r6JK_HHB3ATXif1pl0GZuI"
+          alt="Sua Imagem" style="max-width: 100px; border-radius: 50%;">
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pedro-andrade-914795223"
+            target="_blank">pedro Andrade</a></p>
+
+
+        <img src="https://avatars.githubusercontent.com/u/130566862?v=4" alt="Sua Imagem"
+          style="max-width: 100px; border-radius: 50%;">
+        <p><strong>GitHub:</strong> <a href="https://github.com/Pedroandradeproj" target="_blank">Pedroandradeproj</a>
+        </p>
+      </div>
+    </div>
+
+  </section>
+</body>
+<script>window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"detect_browser_language":true,"languages":["pt","it","es","en","zh-TW","zh-CN"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"pt":"brazil"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/fn.js" defer></script>
+
+
+</html>
