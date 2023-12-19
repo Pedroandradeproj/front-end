@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Calendário de Tarefas</title>
+</head>
+<body>
+    <div class="container">
+        <div class="task-form">
+            <h1>Lista de Tarefas</h1>
+            <form onsubmit="return addTask(event)">
+                <div>
+                    <label for="taskDate">Data:</label>
+                    <input type="date" id="taskDate" required>
+                </div>
+                <div>
+                    <label for="taskTime">Hora:</label>
+                    <input type="time" id="taskTime" required>
+                </div>
+                <div>
+                    <label for="taskColor">Cor:</label>
+                    <select id="taskColor">
+                        <option value="red">Vermelho</option>
+                        <option value="yellow">Amarelo</option>
+                        <option value="blue">Azul</option>
+                        <option value="green">Verde</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="taskInput">Digite a tarefa:</label>
+                    <input type="text" id="taskInput" required>
+                </div>
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+        <ul id="taskList">
+        <!-- Tarefas adicionadas dinamicamente aparecerão aqui -->
+        </ul>
+
+        <div class="calendar-container">
+            <div class="calendar-inputs">
+                <label for="calendarMonth">Mês:</label>
+                <input type="month" id="calendarMonth" onchange="updateCalendar()">
+                <button id="toggleCalendarButton" onclick="toggleCalendar()">Calendário</button>
+            </div>
+            <div class="calendar">
+                <!-- Calendário será gerado dinamicamente aqui -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Div para exibir a data selecionada -->
+    <div id="taskDateDisplay"></div>
+
+    <!-- Div para exibir os detalhes da agenda -->
+    <div id="agendaDetails" style="display: none;">
+        <button id="closeAgendaButton">Fechar</button>
+        <h2 id="agendaTitle">Tarefas do dia <span id="agendaDay"></span>:</h2>
+        <div id="agenda">
+            <!-- Horas da agenda -->
+            <div class="hour">
+                <div class="hour-button">00:00</div>
+            </div>
+            <!-- ... Adicionar as outras horas aqui ... -->
+        </div>
+    </div>
+
+    <!-- Div para exibir os minutos na agenda -->
+    <div id="minutesAgenda" ></div>
+
+    <div id="taskDetails" style="display: none;">
+        
+        <div id="taskTitle"></div>
+        <div id="taskContent"></div>
+        <button id="closeTaskButton">Fechar</button>
+    </div>
+    
+    
+
+    <script type="text/javascript" src="js.js"></script> <!-- Mova a referência ao arquivo JavaScript para o final do body -->
+</body>
+</html>

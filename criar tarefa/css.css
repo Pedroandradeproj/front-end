@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="color"],
+input[type="text"],
+button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para o calendário */
+.calendar-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#calendarTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.calendar {
+    display: none;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.today {
+    font-weight: bold;
+}
+
+.has-task {
+    background-color: #8BC34A;
+    color: white;
+}
+
+.day.day-has-task {
+    background-color: #8BC34A;
+    color: white;
+}
+
+.day.selected-day {
+    outline: 2px solid #4CAF50;
+    outline-offset: -4px;
+}
+
+#toggleCalendarButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 60%;
+}
+
+#toggleCalendarButton:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para os campos "Escolha o mês" e "Calendário" */
+.calendar-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Ajustando o espaço entre os campos */
+label[for="calendarMonth"] {
+    margin-right: 10px;
+}
+
+/* Estilos para a caixa do resultado do dia selecionado */
+#agendaDetails {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    margin: 20px auto; /* Centralizar a caixa do resultado */
+    width: 80%; /* Ajustar a largura do resultado */
+    font-size: 16px; /* Ajustar o tamanho da fonte do texto */
+    line-height: 1.6; /* Ajustar o espaçamento entre as linhas do texto */
+}
+
+/* ... (Estilos existentes) ... */
+
+
+.hour.has-task {
+    background-color: white; /* Cor verde para os botões de hora que têm tarefas */
+    color: white;
+    
+}
+
+
+
+
+/* Estilos para a agenda de minutos */
+#minutesAgenda {
+    display: none;
+    width: 80%; /* Ajustar a largura da agenda de minutos */
+    margin: 20px 0px 20% auto; /* Centralizar a agenda de minutos */
+}
+
+.minute-row {
+    display: grid; /* Usar grid em vez de flexbox */
+    grid-template-columns: repeat(6, 1fr); /* Definir 6 colunas de largura igual */
+    gap: 5px;
+}
+
+.minute {
+    width: calc(16.666% - 5px); /* Para criar 6 colunas com 5px de espaçamento entre elas */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+/* Estilos para as horas na agenda */
+.hour {
+    display: inline-block;
+    width: calc(25% - 5px); /* Para criar 4 colunas com 5px de espaçamento entre elas */
+    margin: 2px;
+    text-align: center;
+}
+
+/* Estilos para os botões de hora */
+.hour-button {
+    background-color: #4CAF50; /* Cor verde para os botões de hora */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+/* Estilos para as horas na agenda que possuem tarefa */
+.hour.has-task .hour-button {
+    background-color: #4CAF50; /* Cor verde para os botões de hora que possuem tarefa */
+    color: white;
+}
+
+
+.task-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px auto; /* Para centralizar verticalmente */
+    width: 80%; /* Largura ajustável */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: white; /* Cor de fundo */
+}
+
+#taskDetails {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 80%; /* Defina a largura desejada */
+    max-width: 600px; /* Defina a largura máxima desejada */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    border-radius: 10px;
+  }
+  #taskDetails #closeTaskButton {
+    background-color: #000;
+    top: 30px;
+    right: 20px;
+    margin-top: 20px;
+  }
+  #taskDetails #taskTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 35%;
+  }
+  #taskDetails #taskContent {
+    font-size: 16px;
+    font-family: 'Arial';
+    box-shadow: 0px 0px 0.1px 0px #fff;
+    
+  }
+  
